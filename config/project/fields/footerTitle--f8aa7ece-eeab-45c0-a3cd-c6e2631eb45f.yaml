@@ -1,0 +1,19 @@
+columnSuffix: ttspivee
+contentColumnType: text
+fieldGroup: f1a14336-6b77-4ebd-89e6-e50a5bb55776 # Globals - Site Footer
+handle: footerTitle
+instructions: ''
+name: 'Footer Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

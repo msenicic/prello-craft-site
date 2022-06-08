@@ -1,0 +1,20 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 574b4144-8924-4889-ac4d-eab24ab39def # Common - Page Header
+handle: rate
+instructions: ''
+name: Rate
+searchable: false
+settings:
+  contentTable: '{{%stc_rate}}'
+  fieldLayout: table
+  maxRows: '1'
+  minRows: ''
+  placeholderKey: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

@@ -1,0 +1,19 @@
+columnSuffix: gzkkwuga
+contentColumnType: text
+fieldGroup: 83ee1c31-8a76-4046-8635-204aee68afc5 # Common - Page SEO
+handle: pageImageAlt
+instructions: "A description of what is in the image (not a caption).\r\nThis will be used if image is chosen."
+name: 'Page Image Alt'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,82 @@
+{% set bgShape    = entry.backgroundShape.one() %}
+{% set spButton   = entry.button.all() %}
+{% set heading    = entry.heading %}
+{% set spIcons    = entry.icons.all() %}
+{% set phoneImage = entry.phoneImage.one() %}
+{% set spRate     = entry.rate.all() %}
+{% set spStore    = entry.store.all() %}
+{% set spStory    = entry.story.all() %}
+{% set text       = entry.text %}
+
+<section class="page-header" style="background-image: url('{{ siteUrl }}assets/images/image 2.png')">
+    <img class="bg-shape" src="{{ bgShape.url }}" alt="">
+    <div class="container">
+        <div class="main-text">
+            <div class="inner">
+                <div class="title">
+                    <p>{{ heading }}</p>
+                </div>
+                <div class="text">
+                    <p>{{ text }}</p>
+                </div>
+                <div class="button">
+                    {% for button in spButton %}
+                        {% set btnDestination = button.destination.one() %}
+                        {% set btnText        = button.text %}
+                        <a href="{{ btnDestination.url }}"><span>{{ btnText }}</span><i class="fas fa-long-arrow-alt-right"></i></a>
+                    {% endfor %}
+                </div>
+                <div class="buttons">
+                    {% for store in spStore %}
+                        {% set storeImg         = store.storeImage.one() %}
+                        {% set storeDestination = store.destination.one() %}
+                        <a href="{{ storeDestination.url }}"><img src="{{ storeImg.url }}" alt=""></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="phone">
+            <div class="phone-image">
+                <img class="p" src="{{ phoneImage.url }}" alt="">
+                <img class="shape" src="{{ siteUrl }}assets/images/Vector.png" alt="">
+                {% for icons in spIcons %}
+                    {% set icon = icons.icon.one() %}
+                    <img class="icon" src="{{ icon.url }}" alt="">
+                {% endfor %}
+                <img class="arrow" src="{{ siteUrl }}assets/images/Fill-1.png" alt="">
+                <img class="arrow" src="{{ siteUrl }}assets/images/Fill-1.png" alt="">
+                <div class="rate">
+                    {% for rate in spRate %}
+                        {% set grade    = rate.rate %}
+                        {% set rateText = rate.text %}
+                        <div class="star">
+                            <img src="{{ siteUrl }}assets/images/Group 60.png" alt="">
+                            <p>{{ grade }}</p>
+                        </div>
+                        <div class="rate-text">
+                            <p>{{ rateText }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="story">
+                    {% for story in spStory %}
+                        {% set storyChar           = story.character.one() %}
+                        {% set storyHeading        = story.heading %}
+                        {% set storyBtnText        = story.buttonText %}
+                        {% set storyBtnDestination = story.buttonDestination.one() %}
+                        <div class="character">
+                            <img class="char" src="{{ storyChar.url }}" alt="">
+                            <img class="shape-1" src="{{ siteUrl }}assets/images/Vector.png" alt="">
+                        </div>
+                        <div class="story-title">
+                            <p>{{ storyHeading }}</p>
+                        </div>
+                        <div class="story-button">
+                            <a href="{{ storyBtnDestination.url }}"><span>{{ storyBtnText }}</span><i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

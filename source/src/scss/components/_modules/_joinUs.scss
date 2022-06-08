@@ -1,0 +1,85 @@
+.join-us {
+  background-color: $color1;
+  position: relative;
+  padding: 50px 25px;
+  z-index: 1;
+
+  @include media-up(m) {
+    padding: 50px;
+  }
+
+  .shape {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    z-index: -1;
+  }
+
+  .container {
+    z-index: 10;
+    position: relative;
+
+    @include media-up(l) {
+      padding: 0 50px;
+    }
+
+    .main-text {
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+
+      @include media-up(l) {
+        text-align: left;
+        margin: 0;
+      }
+
+      .title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 58px;
+        letter-spacing: -0.03em;
+        color: $white;
+
+        @include media-up(m) {
+          font-size: 48px;
+        }
+      }
+
+      .text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+        color: $white;
+        opacity: 0.7;
+        margin: 10px 0 30px 0;
+
+        @include media-up(m) {
+          font-size: 18px;
+        }
+      }
+
+      a img {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 170px;
+      }
+    }
+
+    .phone {
+      position: absolute;
+      right: 50px;
+      bottom: -50px;
+      width: 250px;
+      display: none;
+
+      @include media-up(l) {
+        display: block;
+      }
+    }
+  }
+}

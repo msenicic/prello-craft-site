@@ -1,0 +1,37 @@
+._wr {
+    @include make-wrapper();
+    @include make-wrapper-max-widths();
+
+    &.single-wr {
+
+        @media (min-width: #{$single-max-width + $grid-gutter-width}) {
+            max-width: $single-max-width;
+        }
+    }
+}
+
+._wr-f {
+    @include make-wrapper();
+}
+
+._w {
+    @include make-wrap();
+}
+
+@if $enable-grid-classes {
+
+    .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+
+        & > .col,
+        & > [class*="_"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+@if $enable-grid-classes {
+    @include make-grid-columns();
+}

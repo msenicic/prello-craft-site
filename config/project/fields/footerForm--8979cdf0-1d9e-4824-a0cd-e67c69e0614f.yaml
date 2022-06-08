@@ -1,0 +1,20 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: f1a14336-6b77-4ebd-89e6-e50a5bb55776 # Globals - Site Footer
+handle: footerForm
+instructions: ''
+name: 'Footer Form'
+searchable: false
+settings:
+  contentTable: '{{%stc_footerform}}'
+  fieldLayout: table
+  maxRows: '1'
+  minRows: ''
+  placeholderKey: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

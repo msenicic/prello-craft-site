@@ -1,0 +1,170 @@
+{% set bodyClass = 'home' %}
+{% extends "page/users/base" %}
+{% set siteLogo = siteNav.siteLogo.one() %}
+
+{% block main %}
+	<div
+		class="page-wrapper {# _wr #}">
+		{# Require that a user is logged in to view this form. #}
+		{% requireLogin %}
+
+		{% macro errorList(errors) %}
+			{% if errors %}
+				{{ ul(errors, {class: 'errors'}) }}
+			{% endif %}
+		{% endmacro %}
+
+		{# If there were any validation errors, a `user` variable will be passed to the
+																																																																														   template, which contains the posted values and validation errors. If that’s not
+																																																																														   set, we’ll default to the current user. #}
+		{% set user = user ?? currentUser %}
+
+		{% if user.hasErrors() %}
+			<p>Unable to save your profile.</p>
+		{% endif %}
+		{# Require that a user is logged in to view this form. #}
+		{% requireLogin %}
+
+		{% macro errorList(errors) %}
+			{% if errors %}
+				{{ ul(errors, {class: 'errors'}) }}
+			{% endif %}
+		{% endmacro %}
+
+		{# If there were any validation errors, a `user` variable will be passed to the
+																																																																														   template, which contains the posted values and validation errors. If that’s not
+																																																																														   set, we’ll default to the current user. #}
+		{% set user = user ?? currentUser %}
+
+		{% if user.hasErrors() %}
+			<p>Unable to save your profile.</p>
+		{% endif %}
+		<div class="main-form profile">
+			{% include "page/users/form-picture" %}
+			<div class="form">
+				{% include "_layouts/_nav" %}
+				<form method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+					<div class="text">
+						<div class="site-logo">
+							<a href="{{ siteUrl }}">
+								{% if siteLogo %}
+									<img src="{{ siteLogo.url }}" alt="{{ currentSite.name }}">
+								{% endif %}
+							</a>
+						</div>
+						<div class="title">
+							<p>Dobrodošli!</p>
+						</div>
+						<div class="description">
+							<p>Ovde možete da promenite podatke u Prello.App-u</p>
+						</div>
+					</div>
+					<div class="input">
+						{{ csrfInput() }}
+						{{ actionInput('users/save-user') }}
+						{{ hiddenInput('userId', user.id) }}
+						<div class="inner">
+							{{ input('text', 'firstName', user.firstName, {
+    id: 'first-name',
+    class: user.hasErrors('firstName') ? 'error',
+    autocomplete: 'given-name',
+	placeholder: 'First Name',
+  }) }}
+						</div>
+						{{ _self.errorList(user.getErrors('firstName')) }}
+						<div class="inner">
+							{{ input('text', 'lastName', user.lastName, {
+    id: 'last-name',
+    class: user.hasErrors('lastName') ? 'error',
+    autocomplete: 'family-name',
+	placeholder: 'Last Name',
+  }) }}
+						</div>
+						{{ _self.errorList(user.getErrors('lastName')) }}
+						{% if not craft.app.config.general.useEmailAsUsername %}
+							<div class="inner">
+								{{ input('text', 'username', user.username, {
+      id: 'username',
+      class: user.hasErrors('username') ? 'error',
+      autocomplete: 'username',
+	  placeholder: 'Username',
+    }) }}
+							</div>
+							{{ _self.errorList(user.getErrors('username')) }}
+						{% endif %}
+						<div class="inner">
+							{{ input('text', 'email', user.unverifiedEmail ?? user.email, {
+    id: 'email',
+    class: user.hasErrors('email') ? 'error',
+    autocomplete: 'email',
+	placeholder: 'Email',
+  }) }}
+
+							{{ _self.errorList(user.getErrors('username')) }}
+
+							{% if craft.app.projectConfig.get('users.requireEmailVerification') %}
+								<p>New email addresses need to be verified.</p>
+							{% endif %}
+						</div>
+						<div class="inner">
+							{{ input('password', 'newPassword', null, {
+    id: 'new-password',
+    class: user.hasErrors('newPassword') ? 'error',
+    autocomplete: 'new-password',
+	placeholder: 'New Password',
+  }) }}
+						</div>
+						{{ _self.errorList(user.getErrors('newPassword')) }}
+						<div class="inner">
+							{{ input('password', 'password', null, {
+    id: 'current-password',
+    class: user.hasErrors('currentPassword') ? 'error',
+    autocomplete: 'current-password',
+	placeholder: 'Current Password',
+  }) }}
+						</div>
+						{{ _self.errorList(user.getErrors('currentPassword')) }}
+						<div class="inner">
+							{% if user.photo %}
+								<label>Photo</label>
+								{{ user.photo.getImg({width: 150, height: 150})|attr({
+      id: 'user-photo',
+      alt: user.friendlyName,
+    }) }}
+
+								<label for="delete-photo">
+									{{ input('checkbox', 'deletePhoto', '1', {
+        id: 'delete-photo',
+      }) }}
+									Delete photo
+								</label>
+							{% endif %}
+
+							<label for="photo">Upload a new photo</label>
+							{{ input('file', 'photo', null, {
+    id: 'photo',
+    accept: 'image/png,image/jpeg',
+  }) }}
+						</div>
+						{# Custom “Bio” field #}
+						{# <label for="bio">Bio</label>
+																																																																																																																																																																																																					{{ tag('textarea', {
+																																																																																																																																																																																																					text: user.bio,
+																																																																																																																																																																																																					id: 'bio',
+																																																																																																																																																																																																					name: 'fields[bio]',
+																																																																																																																																																																																																					class: user.hasErrors('bio') ? 'error',
+																																																																																																																																																																																																					}) }}
+																																																																																																																																																																																																					{{ _self.errorList(user.getErrors('bio')) }} #}
+					</div>
+					<div class="button">
+						<button type="submit">
+							Save Profile
+							<i class="fas fa-long-arrow-alt-right"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+field: 2202461d-285c-4b02-9aa1-66fea5228786 # Site Custom Navigation
+fieldLayouts:
+  b4ba9cdc-c76f-4947-96bd-d1d849d10e7b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8ca9ce47-bfd4-4d95-bdae-4074e4ad3960 # Entry Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  8ca9ce47-bfd4-4d95-bdae-4074e4ad3960: # Entry Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryLink
+    instructions: ''
+    name: 'Entry Link'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+handle: entryField
+name: 'Entry Field'
+sortOrder: 1

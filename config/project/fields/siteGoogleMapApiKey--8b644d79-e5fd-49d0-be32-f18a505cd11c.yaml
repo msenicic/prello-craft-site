@@ -1,0 +1,19 @@
+columnSuffix: kphnujjp
+contentColumnType: text
+fieldGroup: c4e164b5-66b6-4259-9985-d28e3cceae21 # Globals - Site Settings
+handle: siteGoogleMapApiKey
+instructions: ''
+name: 'Site Google Map Api Key'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

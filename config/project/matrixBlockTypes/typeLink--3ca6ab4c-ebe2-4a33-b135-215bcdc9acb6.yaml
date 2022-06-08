@@ -1,0 +1,94 @@
+field: 2202461d-285c-4b02-9aa1-66fea5228786 # Site Custom Navigation
+fieldLayouts:
+  4d8331cb-e711-49b9-ae04-58b67d35da94:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2b615e3e-47bc-4f90-b2be-0bc29d7bb5fb # Menu Item Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 61d008d2-57d9-4b99-a31c-cb4a13ecfeee # Menu Item URL
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 666fa1ef-5a45-438a-b07a-373cb729a9f6 # Open in New Tab?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: Content
+        sortOrder: 1
+fields:
+  2b615e3e-47bc-4f90-b2be-0bc29d7bb5fb: # Menu Item Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: menuItemText
+    instructions: 'Text (label) of this menu item'
+    name: 'Menu Item Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  61d008d2-57d9-4b99-a31c-cb4a13ecfeee: # Menu Item URL
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: menuItemUrl
+    instructions: 'URL of this menu item'
+    name: 'Menu Item URL'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  666fa1ef-5a45-438a-b07a-373cb729a9f6: # Open in New Tab?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: openInNewTab
+    instructions: ''
+    name: 'Open in New Tab?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: typeLink
+name: 'Type Link'
+sortOrder: 2

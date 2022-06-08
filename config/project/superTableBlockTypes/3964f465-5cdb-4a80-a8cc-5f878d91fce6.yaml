@@ -1,0 +1,68 @@
+field: dfa34bcd-e1c4-414b-a34a-9844b40aa67e # Rate
+fieldLayouts:
+  dcc64d4b-6956-45fe-9b11-94f12900d7e5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 97dc8a91-ce0c-4d84-a3c5-89f6bf08ef9f # Rate
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d7182195-78cb-481a-9165-070494ed0665 # Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  97dc8a91-ce0c-4d84-a3c5-89f6bf08ef9f: # Rate
+    columnSuffix: wbfiadrd
+    contentColumnType: 'decimal(2,1)'
+    fieldGroup: null
+    handle: rate
+    instructions: ''
+    name: Rate
+    searchable: false
+    settings:
+      decimals: '1'
+      defaultValue: null
+      max: '5'
+      min: '0'
+      prefix: null
+      previewCurrency: ''
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  d7182195-78cb-481a-9165-070494ed0665: # Text
+    columnSuffix: jhnlwvsg
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Text
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 83ee1c31-8a76-4046-8635-204aee68afc5 # Common - Page SEO
+handle: pageImage
+instructions: "Use SEO page image to represent this page when sharing it (like on facebook).\r\nBest use 1200px x 630px, or squared images 1200px x 1200px or above."
+name: 'Page Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: 'Add an Image'
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:8dec0694-79e6-43cf-9898-1f9633496ab5' # Videos
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,51 @@
+{% set buttons = siteFooter.footerButtons.all() %}
+{% set form    = siteFooter.footerForm.all() %}
+{% set logo    = siteFooter.footerLogo.one() %}
+{% set shape   = siteFooter.footerShape.one() %}
+{% set title   = siteFooter.footerTitle %}
+
+<footer id="footer" class="site-footer">
+    <img class="bg-shape" src="{{ shape.url }}" alt="">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ siteUrl }}"><img src="{{ logo.url }}" alt=""></a>
+        </div>
+        <div class="main-text">
+            <div class="title">
+                <p>{{ title }}</p>
+            </div>
+            <div class="buttons">
+                {% for footerButtons in buttons %}
+                    {% set destination = footerButtons.destination.one() %}
+                    {% set imageButton = footerButtons.storeImage.one() %}
+                    <a href="{{ destination.url }}"><img src="{{ imageButton.url }}" alt=""></a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="form">
+            {% for footerForm in form %}
+                {% set formImage       = footerForm.image.one() %}
+                {% set formTitle       = footerForm.heading %}
+                {% set formText        = footerForm.text %}
+                {% set formPlaceholder = footerForm.placeholder %}
+                {% set formBtnText     = footerForm.buttonText %}
+                <div class="image"><img src="{{ formImage.url }}" alt=""></div>
+                <div class="form-text">
+                    <div class="form-title">
+                        <p>{{ formTitle }}</p>
+                    </div>
+                    <div class="form-text">
+                        <p>{{ formText }}</p>
+                    </div>
+                    <form action="">
+                        <div>
+                            <img src="{{ siteUrl }}assets/images/Frame.png" alt="">
+                            <input placeholder="{{ formPlaceholder }}" type="email">
+                        </div>
+                        <button type="submit">{{ formBtnText }}</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</footer>

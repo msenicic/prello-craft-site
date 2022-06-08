@@ -1,0 +1,36 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: dd03a0d7-4a40-4162-bef3-f490879fe99e # Globals - Site Navigation
+handle: navButton
+instructions: ''
+name: 'Nav Button'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 37c56a7f-ffe8-45c5-a4eb-bfb88f53a99b # Destination
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d36b5a0b-069a-4df6-82af-acecb76dfe44 # Button Text
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_navbutton}}'
+  fieldLayout: row
+  maxRows: '1'
+  minRows: ''
+  placeholderKey: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

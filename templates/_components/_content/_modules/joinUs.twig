@@ -1,0 +1,27 @@
+{% set heading    = module.heading %}
+{% set text       = module.text %}
+{% set superTable = module.store.all() %}
+{% set phoneImage = module.phoneImage.one() %}
+{% set moduleId   = module.moduleId %}
+
+<section id="{{ moduleId ?: 'module-' ~ moduleIndex }}" class="join-us">
+    <img class="shape" src="{{ siteUrl }}assets/images/Shape.png" alt="">
+    <div class="container">
+        <div class="main-text">
+            <div class="title">
+                <p>{{ heading }}</p>
+            </div>
+            <div class="text">
+                <p>{{ text }}</p>
+            </div>
+            <div class="buttons">
+                {% for store in superTable %}
+                    {% set destination = store.destination.one() %}
+                    {% set imageButton = store.imageButton.one() %}
+                    <a href="{{ destination.url }}"><img src="{{ imageButton.url }}" alt=""></a>
+                {% endfor %}
+            </div>
+        </div>
+        <img class="phone" src="{{ phoneImage.url }}" alt="">
+    </div>
+</section>

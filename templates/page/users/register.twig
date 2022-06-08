@@ -1,0 +1,93 @@
+{% set bodyClass = 'home' %}
+{% extends "page/users/base" %}
+{% set siteLogo = siteNav.siteLogo.one() %}
+
+{% block main %}
+
+	<div class="page-wrapper {# _wr #}">
+		{% macro errorList(errors) %}
+			{% if errors %}
+				{{ ul(errors, {class: 'errors'}) }}
+			{% endif %}
+		{% endmacro %}
+
+		{# `user` is defined if the form returns validation errors. #}
+		{% set user = user ?? null %}
+		<div class="main-form register">
+			{% include "page/users/form-picture" %}
+			<div class="form">
+				{% include "_layouts/_nav" %}
+				<form method="post" accept-charset="UTF-8">
+					<div class="text">
+						<div class="site-logo">
+							<a href="{{ siteUrl }}">
+								{% if siteLogo %}
+									<img src="{{ siteLogo.url }}" alt="{{ currentSite.name }}">
+								{% endif %}
+							</a>
+						</div>
+						<div class="title">
+							<p>Dobrodošli u Prello.App</p>
+						</div>
+						<div class="description">
+							<p>Molimo Vas da napravite nalog kako biste pristupili Prello.App-u</p>
+						</div>
+					</div>
+					<div class="input">
+						{{ csrfInput() }}
+						{{ actionInput('users/save-user') }}
+						{{ redirectInput('login') }}
+						<div class="inner">
+							{{ input('text', 'username', user.username ?? null, {
+    id: 'username',
+    autocomplete: 'username',
+	placeholder: 'Username',
+  }) }}
+						</div>
+						{{ user ? _self.errorList(user.getErrors('username')) }}
+						<div class="inner">
+							{{ input('text', 'firstName', user.firstName ?? null, {
+    id: 'firstName',
+    autocomplete: 'given-name',
+	placeholder: 'First Name',
+  }) }}
+						</div>
+						{{ user ? _self.errorList(user.getErrors('firstName')) }}
+						<div class="inner">
+							{{ input('text', 'lastName', user.lastName ?? null, {
+    id: 'lastName',
+    autocomplete: 'family-name',
+	placeholder: 'Last Name',
+  }) }}
+						</div>
+						{{ user ? _self.errorList(user.getErrors('lastName')) }}
+						<div class="inner">
+							{{ input('email', 'email', user.email ?? null, {
+    id: 'email',
+    autocomplete: 'email',
+	placeholder: 'Email',
+  }) }}
+						</div>
+						{{ user ? _self.errorList(user.getErrors('email')) }}
+						<div class="inner">
+							{{ input('password', 'password', null, {
+    id: 'password',
+	placeholder: 'Password',
+  }) }}
+						</div>
+						{{ user ? _self.errorList(user.getErrors('password')) }}
+					</div>
+					<div class="button">
+						<button type="submit">Register
+							<i class="fas fa-long-arrow-alt-right"></i>
+						</button>
+						<p>Već imate nalog?
+							<a href="{{siteUrl}}login">Ulogujte se</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% set siteLogo    = siteNav.siteLogo.one() %}
+<header id="header" class="site-header">
+    <div class="container">
+        <div class="inner">
+            <div class="site-logo">
+                <a href="{{ siteUrl }}">
+                    {% if siteLogo %}
+                        <img src="{{ siteLogo.url }}" alt="{{ currentSite.name }}">
+                    {% endif %}
+                </a>
+            </div>
+            <div class="menu-button js-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        {% include "_layouts/_nav" %}
+    </div>
+</header>

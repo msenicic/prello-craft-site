@@ -1,0 +1,14 @@
+columnSuffix: hqenyejs
+contentColumnType: boolean
+fieldGroup: 1d2fca35-7d0e-4f92-a63e-d4eb52da96fb # Common - Page Data
+handle: hideFromNavigation
+instructions: ''
+name: 'Hide from Navigation?'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

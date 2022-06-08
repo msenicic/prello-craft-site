@@ -1,0 +1,16 @@
+{% if currentUser %}
+
+	{% set bodyClass = 'home' %}
+	{% extends "_layouts/base" %}
+
+	{% block main %}
+
+		{% include '_components/_headers/pageHeader' %}
+		<div class="page-wrapper {# _wr #}">
+			{% include '_components/_content/content' %}
+		</div>
+
+	{% endblock %}
+{% else %}
+	{% redirect "login" %}
+{% endif %}

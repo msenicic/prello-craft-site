@@ -1,0 +1,182 @@
+dateModified: 1645449254
+email:
+  fromEmail: tech@daytwo.no
+  fromName: $DEFAULT_SITE_NAME
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    command: ''
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    0a287f7b-dd3a-4cdb-8b98-48f1e2ee58c1: 'Module ID' # Module ID
+    0e6e5666-709c-4644-87f1-7c603baaad07: Text # Text
+    1d2fca35-7d0e-4f92-a63e-d4eb52da96fb: 'Common - Page Data' # Common - Page Data
+    2a4c9746-d29b-4455-a732-a8d146232bbf: 'Person Image' # Person Image
+    2b615e3e-47bc-4f90-b2be-0bc29d7bb5fb: 'Menu Item Text' # Menu Item Text
+    2c19ec05-5c95-40da-804e-e708a2c96b92: 'Form Char1' # Form Char1
+    2c39c7ba-eefb-4f5e-8c7e-1adf420f7c7c: Heading # Heading
+    2d46993a-c728-4402-a5b2-515f7b24dcf3: 'Character Image' # Character Image
+    2fcb3b81-3e2a-4cc4-84d1-46efbf4d7996: Random # Random
+    3a310ed8-2bb8-400c-bc6b-b2f6a82ddeec: 'Public Schema' # Public Schema
+    3ca6ab4c-ebe2-4a33-b135-215bcdc9acb6: 'Type Link' # Type Link
+    3d8733a9-1971-424a-9db6-c88c4420f775: Text # Text
+    003e8dbf-f3d5-42a9-acfd-51cc14a12729: 'Before Sleeping' # Before Sleeping
+    4e04a2f8-f5f2-417f-a33c-ce58c1f048fc: 'Button Text' # Button Text
+    4f779f5d-4e07-4faa-8685-db94704c9102: Comment # Comment
+    5b6d7881-9bc1-4b9e-8339-64da105704fb: 'Site Google Analytics GTM Code' # Site Google Analytics GTM Code
+    5df73bb3-fa30-415f-aed6-330f010f0842: Statistics # Statistics
+    6a17c419-bd38-4baf-9436-c521466d442b: Description # Description
+    6be2f249-2190-41f4-bd5a-dac046d141cf: Login # Login
+    6ca2c8b1-f196-421c-9730-1b7e3417c910: Character # Character
+    6d369b4f-867a-4924-81b3-129f5bf18721: Description # Description
+    6d528fe1-e1c1-4f21-92dc-d225ee195535: Number # Number
+    6e7cdd12-5e29-4b9e-9527-e21c05429c77: 'Is Page Link Disabled?' # Is Page Link Disabled?
+    6f8e75f6-6c3d-4c85-bacf-3852810bab81: 'Form Background Shape' # Form Background Shape
+    7a43c953-3dd4-40d5-bbe8-498e7411a32c: Heading # Heading
+    7ccd4d19-2082-47d1-9703-579319d1ce48: 'Entry Field' # Entry Field
+    7cec95cc-1712-4f28-b46f-812763ed6230: 'Page URL' # Page URL
+    07d734b2-d967-4f6e-85e2-962785788469: Text # Text
+    8b644d79-e5fd-49d0-be32-f18a505cd11c: 'Site Google Map Api Key' # Site Google Map Api Key
+    8ca9ce47-bfd4-4d95-bdae-4074e4ad3960: 'Entry Link' # Entry Link
+    8dec0694-79e6-43cf-9898-1f9633496ab5: Videos # Videos
+    8ff7c066-e648-4ff8-bb27-30e5b1252556: Destination # Destination
+    9a1afb30-f8c5-411a-bd8c-5bfd145b9e2c: Heading # Heading
+    9b945315-3db4-41ba-9110-8332d8eb81ab: Destination # Destination
+    9cb342de-e6d1-4d7f-b683-712e4d386889: Heading # Heading
+    9d8f1760-5a79-4f2d-a8b5-5167461827d1: Login # Login
+    12ab03c5-9cf4-4d26-9034-8c5cb1cd41f2: Register # Register
+    13e6560d-1bb8-4545-965d-5c83e64f7865: 'Full Name' # Full Name
+    16e3947f-f17f-4564-88b1-5bbfd87258f5: 'Phone Image' # Phone Image
+    018a662e-c147-49ce-ac57-34e6428ec2a5: 'Footer Buttons' # Footer Buttons
+    27aff492-2400-42d9-878a-bd134e93ebd6: $DEFAULT_SITE_NAME # $DEFAULT_SITE_NAME
+    28e00944-172f-4cce-aace-9f08db7ffe60: Statistic # Statistic
+    30d7b80d-5ede-47a8-8b53-9a193547c750: 'Page Description' # Page Description
+    32aa8ee0-7612-4171-890d-39e6eca303f3: Icon # Icon
+    37c56a7f-ffe8-45c5-a4eb-bfb88f53a99b: Destination # Destination
+    43bcae68-fdfc-4df1-b04e-c761664e2c2c: Image # Image
+    45f4d0db-0223-4b55-8ddf-6695fe72bb37: 'Form Text' # Form Text
+    48b393c6-8937-4f82-9402-a1d6bd982171: 'Page Content' # Page Content
+    54a22aed-d769-4392-9448-0d9089c79b60: 'Random Story' # Random Story
+    56f588c0-1118-48a2-a5a7-820293ea0796: Text # Text
+    59bec1aa-61be-4c85-bc31-ed5ee9871741: Text # Text
+    61d008d2-57d9-4b99-a31c-cb4a13ecfeee: 'Menu Item URL' # Menu Item URL
+    63ffb21f-885c-4cf6-a84c-22a8792f3dc3: Heading # Heading
+    68a6525a-1a83-400d-8430-3627525e49b9: 'Phone Image' # Phone Image
+    70b04be1-ca61-4f64-8983-47f37be11675: 'Page Title' # Page Title
+    75d7dc34-89ad-4a21-8626-6e530104d503: Description # Description
+    79deb152-a2fa-41a3-8fa2-e08ac08c357e: 'Site Logo' # Site Logo
+    83ee1c31-8a76-4046-8635-204aee68afc5: 'Common - Page SEO' # Common - Page SEO
+    85b0f58d-b253-4081-90fa-01c6d3d49ff7: 'Nav Button' # Nav Button
+    90fb8792-6025-4c1c-90a5-b316f05b0996: Destination # Destination
+    93ed7b5a-b3c9-4121-b076-705bad9a5bec: 'Button Destination' # Button Destination
+    97dc8a91-ce0c-4d84-a3c5-89f6bf08ef9f: Rate # Rate
+    426b68b5-5e39-4a23-970b-09243bd77e55: 'Footer Shape' # Footer Shape
+    474e6b0e-5640-4462-a5aa-52f57d17d0b7: Star # Star
+    574b4144-8924-4889-ac4d-eab24ab39def: 'Common - Page Header' # Common - Page Header
+    644dd979-58cd-4fcf-911c-ad9bd2ffc3d0: Store # Store
+    661cf574-0d03-4c9b-a99f-5f446e8eaf86: 'Join Us' # Join Us
+    666fa1ef-5a45-438a-b07a-373cb729a9f6: 'Open in New Tab?' # Open in New Tab?
+    680bd3a1-016d-4e2b-b820-9267a206301a: 'Module ID' # Module ID
+    686cdb01-cbca-45be-8913-b76e21a51b03: 'Btn Text' # Btn Text
+    879afd42-b057-4240-b4f1-819732f4d4d4: Placeholder # Placeholder
+    962a5026-118c-4d2c-91f8-a25bf0881172: Images # Images
+    2521f9df-22eb-469b-8ede-9fc16a2285f0: Statistics # Statistics
+    2626dc9f-9a5a-4818-a5bf-ae104653d222: Icon # Icon
+    2933a7fa-d1d1-49eb-b7f5-079b5109fccf: Text # Text
+    3426bbd8-ae24-4099-88d4-f6fe3f6b1e18: 'Use Custom Navigation?' # Use Custom Navigation?
+    4020c52a-1f9d-4527-92c4-cdda2f754de6: 'Module ID' # Module ID
+    4818e5e3-d0fd-437f-920a-3c72234723e5: 'Site Footer' # Site Footer
+    5258e7de-fdc7-487f-9a45-2e567a7b1251: Images # Images
+    7322d969-ae2d-41ba-ac69-fe6edcb9bfdb: Icon # Icon
+    8979cdf0-1d9e-4824-a0cd-e67c69e0614f: 'Footer Form' # Footer Form
+    9680b49c-b04e-4c96-8900-6a892993caa8: 'Top Title' # Top Title
+    9798f58c-a74c-43c0-a463-806c28e359a3: 'Btn Destination' # Btn Destination
+    29814af0-ec52-4645-af38-99c78df2c2a2: Icons # Icons
+    34268a23-b9d9-4fee-a6fe-9fb8188113c0: 'Form Image' # Form Image
+    40816dba-f57f-46d5-92bb-b0be3bd8ffc0: 'External URL' # External URL
+    75979b57-72e1-4ff5-95b3-09762482b592: 'Top Text' # Top Text
+    86416bf7-8b17-4f84-a365-c3b2f72e8651: Default # Default
+    850706b1-27c0-42f1-a027-c028a685f2a0: Register # Register
+    963478cf-da01-4a9a-8ded-a13a53242ff9: Character # Character
+    1305912f-e7bd-4297-b074-b9c45da795db: 'Module ID' # Module ID
+    2202461d-285c-4b02-9aa1-66fea5228786: 'Site Custom Navigation' # Site Custom Navigation
+    31937085-7234-48c8-bb82-cc8276f86716: Number # Number
+    62629706-5d42-4d72-8996-b97d67d6e0e6: Files # Files
+    72312580-06a1-4859-97cb-64789885c224: Home # Home
+    91349819-15b9-46ac-976b-277d7c2c39c6: 'Button Text' # Button Text
+    93021694-8b8a-4616-b098-884f63a93d0e: Random # Random
+    a0120ff0-936f-416b-9bfc-168bf2408950: 'Background Image' # Background Image
+    a1c8b682-fb4f-4bf2-a2b0-e01323dde25a: 'Footer Logo' # Footer Logo
+    a157a8a1-b16f-4f2d-92c9-75219eb257f6: Heading # Heading
+    aa22c616-dfd3-47d0-8774-df6510630fd7: Text # Text
+    af6de870-a500-49dd-8ede-18667b8c141a: 'Reset Password' # Reset Password
+    af23fb26-e22d-4a5a-b73c-988c86083d81: 'Module ID' # Module ID
+    b0665c78-a776-4bfc-adec-5ea0c9c3b7dd: Heading # Heading
+    b8fc7270-3447-477e-a9ea-f21be3c0cee3: 'Site Google UA Tracking Code' # Site Google UA Tracking Code
+    b96a83bc-7338-418b-a2ed-60125cabcd77: 'Form Char2' # Form Char2
+    b395b4bc-4cdd-4edf-a06c-5c3ed9e758cb: 'Page Image' # Page Image
+    b567ebb8-3604-4460-94e9-0e39ff0c6be8: Destination # Destination
+    ba9a3316-329c-4df5-8ddd-9abc7ac9f7d7: 'Page Image Alt' # Page Image Alt
+    ba12c0af-c332-466e-ae8f-9b8666302e87: 'Phone Image' # Phone Image
+    bb3e1e90-15fa-4f81-8fc9-3f21a708c2af: 'Site Settings' # Site Settings
+    be46c49c-a4fb-40c9-81e7-0d070692e59d: Text # Text
+    c4a8b2e0-0c74-4df4-9c1a-15763cf310d0: 'Common - Form Picture' # Common - Form Picture
+    c4e164b5-66b6-4259-9985-d28e3cceae21: 'Globals - Site Settings' # Globals - Site Settings
+    c6e47063-6662-420b-8f08-084b7c1523b6: 'Background Color' # Background Color
+    c694933e-c41c-4948-af64-4226c2b14db4: Store # Store
+    c3184613-b616-476c-8e04-3d5a13f5f518: 'Image Button' # Image Button
+    cdb48d73-ede4-4a4a-acc6-d52866a64cd5: 'Store Image' # Store Image
+    cfc03e75-0d35-4bf1-b35f-48dfa5b9c601: Profile # Profile
+    cfecf752-7a35-49d4-a197-4967e8ed3714: Story # Story
+    d024166d-eb74-487d-bea1-85dde5252324: Slider # Slider
+    d072491e-63c4-4de7-8310-8164667fcf72: 'Top Title' # Top Title
+    d5c3224c-f766-4625-ac73-882d233e1ff0: 'Is External URL?' # Is External URL?
+    d36b5a0b-069a-4df6-82af-acecb76dfe44: 'Button Text' # Button Text
+    d98b5e4a-c4c6-418e-a8c6-7833b12bc420: 'Common - Page Content' # Common - Page Content
+    d7136f58-9984-4fc0-9d38-0f5fd8bad147: Home # Home
+    d7182195-78cb-481a-9165-070494ed0665: Text # Text
+    dc4aeb13-05e2-4e9d-98d1-a1a81f577136: Statistic # Statistic
+    dc4c72fc-fc7a-4701-ab4e-1a141165f786: 'Public Pages' # Public Pages
+    dc6dc995-abcc-4436-82ce-807a1cbf67a0: 'Site Navigation' # Site Navigation
+    dd03a0d7-4a40-4162-bef3-f490879fe99e: 'Globals - Site Navigation' # Globals - Site Navigation
+    dfa34bcd-e1c4-414b-a34a-9844b40aa67e: Rate # Rate
+    e2cd8c85-6aab-4997-b7bf-095086418cc0: 'Reset Password' # Reset Password
+    e4f0bfd5-04d4-4d5f-a096-5079ebf861e1: Icon # Icon
+    e866dc8a-2bc3-4553-a965-dbc20ea19c38: Comments # Comments
+    e941803a-0478-42db-a0cd-8c2fada3f059: 'Phone Image' # Phone Image
+    e7740343-2cbd-48c7-99e3-b58bdbf20639: Button # Button
+    ed1a23e8-8e96-42c3-9a48-7709c6bcf656: 'Store Image' # Store Image
+    ee569822-b12e-446d-8d43-95e358c81fda: Heading # Heading
+    f1a14336-6b77-4ebd-89e6-e50a5bb55776: 'Globals - Site Footer' # Globals - Site Footer
+    f3d86d98-cc1e-40fd-8ad8-3e66d6655be5: Profile # Profile
+    f8aa7ece-eeab-45c0-a3cd-c6e2631eb45f: 'Footer Title' # Footer Title
+    f4042a17-3b52-4e5e-a029-77dba9863c12: 'Background Shape' # Background Shape
+    f4815c5d-d14e-4071-bc18-3988c1941e58: $DEFAULT_SITE_NAME # $DEFAULT_SITE_NAME
+    fb9f215a-892f-47fe-bd25-40db136e8d46: Heading # Heading
+    fb84bf1a-5324-4c6b-998c-a9fc6d5d1134: 'Hide from Navigation?' # Hide from Navigation?
+    ffbe1f62-2681-4631-b540-b549a87a28fe: Catalog # Catalog
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+system:
+  edition: pro
+  live: true
+  name: $DEFAULT_SITE_NAME
+  retryDuration: null
+  schemaVersion: 3.7.8
+  timeZone: Europe/Oslo
+users:
+  allowPublicRegistration: true
+  defaultGroup: ''
+  photoSubpath: null
+  photoVolumeUid: 5258e7de-fdc7-487f-9a45-2e567a7b1251 # Images
+  requireEmailVerification: true
+  suspendByDefault: false
+  validateOnPublicRegistration: false

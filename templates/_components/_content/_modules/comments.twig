@@ -1,0 +1,97 @@
+{% set heading    = module.heading %}
+{% set superTable = module.comment.all() %}
+{% set moduleId   = module.moduleId %}
+
+<section id="{{ moduleId ?: 'module-' ~ moduleIndex }}" class="comments">
+	<div class="container">
+		<div class="slider">
+			<div class="main-text">
+				<div class="title">
+					<p>{{ heading }}</p>
+				</div>
+			</div>
+			<div class="inner">
+				<div class="slider-wrapper">
+					<div class="swiper comment-swiper">
+						<div class="swiper-wrapper">
+							{% for comment in superTable %}
+								{% set icon        = comment.icon.one() %}
+								{% set fullName    = comment.fullName %}
+								{% set description = comment.description %}
+								{% set text        = comment.text %}
+								{% set star        = comment.star %}
+								<div class="swiper-slide">
+									<div class="rate">
+										<div class="name">
+											<div class="icon"><img src="{{ icon.url }}" alt=""></div>
+											<div class="full-name">
+												<div class="full">
+													<p>{{ fullName }}</p>
+												</div>
+												<div class="description">
+													<p>{{ description }}</p>
+												</div>
+											</div>
+										</div>
+										<div class="star">
+											{% for i in 1..star %}
+												<img src="{{ siteUrl }}assets/images/Star 1.png" alt="">
+											{% endfor %}
+										</div>
+									</div>
+									<div class="text">
+										<p>{{ text }}</p>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+						<div class="swiper-buttons">
+							<div class="custom-swiper-button-prev custom-swiper-button">
+								<svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="48" y="48" width="48" height="48" rx="24" transform="rotate(-180 48 48)" fill="white"/>
+									<rect x="47.5" y="47.5" width="47" height="47" rx="23.5" transform="rotate(-180 47.5 47.5)" stroke="#7549F1" stroke-opacity="0.2"/>
+									<path d="M33 24.0002L15 24.0002" stroke="#7549F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M20.1428 19.0001L15 24.0002" stroke="#7549F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M20.1428 29L15 23.9998" stroke="#7549F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
+							<div class="custom-swiper-button-next custom-swiper-button">
+								<svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="48" height="48" rx="24" fill="white"/>
+									<rect x="0.5" y="0.5" width="47" height="47" rx="23.5" stroke="#7549F1" stroke-opacity="0.2"/>
+									<path d="M15 23.9998H33" stroke="#7549F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M27.8572 28.9999L33 23.9998" stroke="#7549F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M27.8572 19L33 24.0002" stroke="#7549F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{#
+				<div class="comments-form">
+					<div class="title">
+						<p>Dodajte komentar</p>
+					</div>
+					{% if currentUser %}
+						<div class="comment-form">
+							<form action="" method="POST">
+								<input required name="deskripcija" class="input" type="text" placeholder="Deskripcija">
+								<textarea required name="komentar" class="input textarea" placeholder="Komentar"></textarea>
+								<input required name="ocena" class="input range" type="range" step="1" min="0" max="5">
+								<button name="submit" class="input button">Dodaj komentar</button>
+							</form>
+						</div>
+					{% else %}
+						<p class="non-active">Ako želite da dodate komentar morate da napravite nalog ->
+							<a href="{{siteUrl}}register">Register</a>
+						</p>
+						<p class="non-active">Ako već imate nalog onda idite na ->
+							<a href="{{siteUrl}}login">Log-in</a>
+						</p>
+					{% endif %}
+				</div>
+				#}
+	</div>
+</section>

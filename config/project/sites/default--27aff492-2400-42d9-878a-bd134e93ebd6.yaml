@@ -1,0 +1,9 @@
+baseUrl: '@web'
+enabled: true
+handle: default
+hasUrls: true
+language: en
+name: $DEFAULT_SITE_NAME
+primary: true
+siteGroup: f4815c5d-d14e-4071-bc18-3988c1941e58 # $DEFAULT_SITE_NAME
+sortOrder: 1

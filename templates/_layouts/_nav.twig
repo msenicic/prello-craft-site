@@ -1,0 +1,40 @@
+{% set pages               = craft.entries.section('publicPages').all() %}
+{% set useCustomNavigation = siteNav.useCustomNavigation %}
+{% if not useCustomNavigation and pages | length %}
+    <nav class="site-nav">
+        <div class="inner">
+            <ul class="js-main-menu menu">
+                {% nav page in pages %}
+                    {% set isExternalUrl = page.isExternalUrl %}
+                    {% set externalUrl   = page.externalUrl %}
+                    {% set hideFromNav   = page.hideFromNavigation %}
+                    {% set pageDisabled  = page.isPageDisabled %}
+
+                    <li class="{{ hideFromNav ? 'hidden' : 'not-hidden' }}{{ pageDisabled ? ' disabled' }}{{ page.url is same as(entry.url) and not pageDisabled ? ' active' }}">
+                        {% if pageDisabled %}
+                            <a href="javascript:;" data-disabled>
+                                {{ page.title }}
+                            </a>
+                        {% elseif (isExternalUrl and externalUrl) %}
+                            <a href="{{ externalUrl }}" target="_blank">
+                                {{ page.title }}
+                            </a>
+                        {% else %}
+                            {{ page.getLink() }}
+                        {% endif %}
+
+                        {% ifchildren %}
+                            <div class="submenu-trigger js-submenu-trigger"></div>
+                            <ul class="submenu">
+                                {% children %}
+                            </ul>
+                        {% endifchildren %}
+                    </li>
+                {% endnav %}
+            </ul>
+        </div>
+    </nav>
+{% else %}
+    {% include '_layouts/_nav-custom' %}
+{% endif %}
+

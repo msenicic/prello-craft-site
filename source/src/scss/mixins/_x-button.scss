@@ -1,0 +1,27 @@
+@mixin x-button($x-button-size: 30px, $x-button-line: 2px, $x-button-color: $white) {
+    $x-button-line-half: $x-button-line / 2;
+    position: relative;
+    width: $x-button-size; height: $x-button-size;
+    color: $x-button-color;
+    transform: rotate(45deg);
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+
+    &::before {
+        top: 0; bottom: 0;
+        width: $x-button-line;
+        left: calc(50% - #{$x-button-line-half});
+        background: currentColor;
+    }
+
+    &::after {
+        left: 0; right: 0;
+        height: $x-button-line;
+        top: calc(50% - #{$x-button-line-half});
+        background: currentColor;
+    }
+}

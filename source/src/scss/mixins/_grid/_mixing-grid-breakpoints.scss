@@ -1,0 +1,110 @@
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+    $n: index($breakpoint-names, $name);
+    @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+    $next: breakpoint-next($name, $breakpoints);
+    @return if($next, breakpoint-min($next, $breakpoints) - .02px, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, '', '#{$name}');
+}
+
+@mixin media-up($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+
+    @if $min {
+
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-down($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    $current: map-get($breakpoints, $name);
+    $current-max: $current - .02px;
+
+    @if $min {
+
+        @media (max-width: $current-max) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($lower, $breakpoints);
+    $max: breakpoint-max($upper, $breakpoints);
+    $current-upper: map-get($breakpoints, $upper);
+    $current-upper-max: $current-upper - .02px;
+
+    @if $min != null {
+
+        @media (min-width: $min) and (max-width: $current-upper-max) {
+            @content;
+        }
+    } @else if $min == null {
+
+        @include media-down($upper, $breakpoints) {
+            @content;
+        }
+    }
+}
+
+@mixin media-only($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+    $max: breakpoint-max($name, $breakpoints);
+
+    @if $min != null and $max != null {
+
+        @media (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else if $max == null {
+
+        @include media-up($name, $breakpoints) {
+            @content;
+        }
+    } @else if $min == null {
+
+        @media (max-width: $max) {
+            @content;
+        }
+    }
+}
+// This is for landscape devices + landscape for iPhone X (which has really wide height, so on landscape height becomes width -> goes over 768px breakpoint
+// IMPORTANT: This breakpoint should be used after @include media-up(m -> or anything that is above tablets), so it successfully overrides it
+@mixin media-landscape {
+
+    @media (min-width: #{$mobile-landscape-width}) and (max-height: #{$mobile-landscape-height}) and (orientation: landscape) {
+        @content;
+    }
+
+    @media only screen
+    and (device-width: 375px)
+    and (device-height: 812px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+        @content;
+    }
+}
+// This is breakpoint for narrow laptop screens. You can find width and height of narrow laptops (width is normal, but height should be decided on and updated)
+@mixin media-laptop {
+
+    @media (min-width: #{$narrow-laptop-width}) and (max-height: #{$narrow-laptop-height}) {
+        @content;
+    }
+}

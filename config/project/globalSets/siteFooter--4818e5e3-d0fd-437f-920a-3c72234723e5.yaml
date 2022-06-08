@@ -1,0 +1,59 @@
+fieldLayouts:
+  735af975-8d6b-43fe-91b5-b390918d6e68:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 426b68b5-5e39-4a23-970b-09243bd77e55 # Footer Shape
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: a1c8b682-fb4f-4bf2-a2b0-e01323dde25a # Footer Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f8aa7ece-eeab-45c0-a3cd-c6e2631eb45f # Footer Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 018a662e-c147-49ce-ac57-34e6428ec2a5 # Footer Buttons
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 8979cdf0-1d9e-4824-a0cd-e67c69e0614f # Footer Form
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Footer
+        sortOrder: 1
+handle: siteFooter
+name: 'Site Footer'
+sortOrder: 3

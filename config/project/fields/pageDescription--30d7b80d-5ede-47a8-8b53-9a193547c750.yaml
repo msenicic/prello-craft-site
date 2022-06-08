@@ -1,0 +1,19 @@
+columnSuffix: pbsmypnx
+contentColumnType: text
+fieldGroup: 83ee1c31-8a76-4046-8635-204aee68afc5 # Common - Page SEO
+handle: pageDescription
+instructions: 'SEO Description of a page.'
+name: 'Page Description'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

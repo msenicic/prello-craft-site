@@ -1,0 +1,137 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  27129588-a6d0-4231-a4a6-e04fd1e67e4c:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b0665c78-a776-4bfc-adec-5ea0c9c3b7dd # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4f779f5d-4e07-4faa-8685-db94704c9102 # Comment
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: af23fb26-e22d-4a5a-b73c-988c86083d81 # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4f779f5d-4e07-4faa-8685-db94704c9102: # Comment
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: comment
+    instructions: ''
+    name: Comment
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - e4f0bfd5-04d4-4d5f-a096-5079ebf861e1 # Icon
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 13e6560d-1bb8-4545-965d-5c83e64f7865 # Full Name
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 75d7dc34-89ad-4a21-8626-6e530104d503 # Description
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 2933a7fa-d1d1-49eb-b7f5-079b5109fccf # Text
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 474e6b0e-5640-4462-a5aa-52f57d17d0b7 # Star
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_7_comment}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationKeyFormat: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  af23fb26-e22d-4a5a-b73c-988c86083d81: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b0665c78-a776-4bfc-adec-5ea0c9c3b7dd: # Heading
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: comments
+name: Comments
+sortOrder: 4

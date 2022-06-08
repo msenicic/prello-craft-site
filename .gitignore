@@ -1,0 +1,58 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+/web/uploads/
+/web/phpmyadmin
+/web/assets/images/
+bootstrap.sh
+
+/templates/_components/_seo/
+
+# ignore node/bower dependency directories
+node_modules/
+bower_components/
+.vagrant
+vagrantfile
+
+# File types that shouldn't be tracked
+*.css.map
+*.js.map
+
+# Ignore OS generated files
+ehthumbs.db
+Thumbs.db
+.sass-cache
+.DS_Store
+phpmyadmin
+
+# Ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore desktop.ini
+desktop.ini

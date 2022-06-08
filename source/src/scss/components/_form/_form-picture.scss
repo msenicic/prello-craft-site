@@ -1,0 +1,89 @@
+.form-picture {
+  background-color: $color1;
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  padding-bottom: 0;
+
+  .bg-shape {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  .phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+    .phone-image {
+      position: relative;
+      margin: 0 auto;
+      width: 80%;
+      max-width: 300px;
+
+      @include media-up(l) {
+        max-width: 450px;
+        width: 60%;
+      }
+
+      .p {
+        width: 100%;
+      }
+
+      .char-1 {
+        position: absolute;
+        width: 50%;
+        top: 15%;
+        left: -25%;
+      }
+
+      .char-2 {
+        position: absolute;
+        width: 70%;
+        top: 0;
+        right: -15%;
+        transform: translate(50%, -15%);
+        z-index: -1;
+      }
+
+      .arrow {
+        width: 20%;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: -12%;
+        left: 18%;
+      }
+    }
+
+    .top-text {
+      font-family: Kaushan Script;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 38px;
+      text-transform: capitalize;
+      color: $color11;
+      transform: rotate(10.45deg);
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      margin-bottom: 50px;
+      z-index: 10;
+      max-width: 300px;
+
+      @include media-up(l) {
+        max-width: 450px;
+        width: 60%;
+      }
+    }
+  }
+}

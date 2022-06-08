@@ -1,0 +1,226 @@
+.beforeSleeping {
+  padding: 50px 25px;
+  background-size: cover;
+  background-position: center;
+
+  @include media-up(m) {
+    padding: 50px;
+  }
+
+  @include media-up(l) {
+    padding: 100px 50px 50px 50px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+    @include media-up(l) {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .person {
+      position: relative;
+
+      .topText {
+        position: relative;
+        max-width: 350px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        font-family: Kaushan Script;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: $color11;
+
+        @include media-up(l) {
+          position: absolute;
+          margin: 0;
+          transform: rotate(10.45deg);
+          top: -20%;
+          right: -90%;
+          max-width: 300px;
+        }
+
+        @include media-up(xl) {
+          font-size: 24px;
+          max-width: 350px;
+        }
+
+        img {
+          position: absolute;
+          right: 0;
+          top: 25px;
+          transform: rotate(-45deg);
+          width: 50px;
+
+          @include media-up(l) {
+            transform: rotate(-10.45deg);
+            right: 50%;
+            top: 100%;
+          }
+        }
+      }
+
+      .image {
+        width: 200px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include media-up(xl) {
+          width: 250px;
+        }
+      }
+
+      .shape {
+        width: 250px;
+        height: 300px;
+        background-color :#F0D0ED;
+        border-radius: 20px;
+        margin: auto;
+
+        @include media-up(xl) {
+          width: 300px;
+          height: 350px;
+        }
+      }
+    }
+
+    .text {
+      margin: 30px auto 50px auto;
+      max-width: 600px;
+
+      @include media-up(l) {
+        max-width: 300px;
+        margin: 0 50px;
+      }
+
+      @include media-up(xl) {
+        max-width: 400px;
+      }
+      .title {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 50px;
+        letter-spacing: -0.03em;
+        color: $white;
+        margin-bottom: 20px;
+
+        @include media-up(xl) {
+          font-size: 40px;
+        }
+      }
+
+      .description {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 28px;
+        color: $white;
+        opacity: 0.7;
+
+        @include media-up(xl) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .story {
+      max-width: 325px;
+      margin: 0 auto;
+      padding: 120px 20px 20px 20px;
+      background-color: $color1;
+      text-align: center;
+      border-radius: 30px;
+      position: relative;
+
+      @include media-up(l) {
+        margin: 0;
+      }
+
+      .character {
+        width: 150px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-25%);
+
+        @include media-up(xl) {
+          width: 200px;
+        }
+      }
+
+      .topTitle {
+        font-family: Kaushan Script;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: $color11;
+
+        @include media-up(xl) {
+          font-size: 18px;
+        }
+      }
+
+      .title {
+        margin: 10px 0;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 42px;
+        letter-spacing: -0.03em;
+        color: $white;
+
+        @include media-up(xl) {
+          font-size: 32px;
+        }
+      }
+
+      .text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px;
+        color: $white;
+        margin: 0;
+        margin-bottom: 20px;
+
+        @include media-up(xl) {
+          font-size: 16px;
+        }
+      }
+
+      .button {
+        width: 90%;
+        margin: 0 auto;
+
+        a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background-color: $color10;
+          border-radius: 10px;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: -0.02em;
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{% set bodyClass = 'home' %}
+{% extends "page/users/base" %}
+{% set siteLogo    = siteNav.siteLogo.one() %}
+
+{% block main %}
+
+	<div class="page-wrapper {# _wr #}">
+		<div class="main-form login">
+			{% include "page/users/form-picture" %}
+			<div class="form">
+				{% include "_layouts/_nav" %}
+				<form method="post" accept-charset="UTF-8">
+					<div class="text">
+						<div class="site-logo">
+							<a href="{{ siteUrl }}">
+								{% if siteLogo %}
+									<img src="{{ siteLogo.url }}" alt="{{ currentSite.name }}">
+								{% endif %}
+							</a>
+						</div>
+						<div class="title">
+							<p>Dobrodošli Nazad!</p>
+						</div>
+						<div class="description">
+							<p>Molimo Vas da popunite podatke kako biste pristupili Prello.App-u</p>
+						</div>
+					</div>
+					<div class="input">
+						{{ csrfInput() }}
+						{{ actionInput('users/login') }}
+						{{ redirectInput("{{siteUrl}}") }}
+						<div class="inner">
+							{{ input('text', 'loginName', craft.app.user.rememberedUsername, {
+    id: 'loginName',
+    autocomplete: 'username',
+	placeholder: 'Username or email',
+  }) }}
+						</div>
+						<div class="inner">
+							{{ input('password', 'password', null, {
+    id: 'password',
+	placeholder: 'Password',
+  }) }}
+						</div>
+						<label>
+							{{ input('checkbox', 'rememberMe', '1') }}
+							Remember me
+						</label>
+					</div>
+					<div class="button">
+						<button type="submit">Login
+							<i class="fas fa-long-arrow-alt-right"></i>
+						</button>
+						<p>Nemate nalog?
+							<a href="{{siteUrl}}register">Napravite ga</a>
+						</p>
+
+						{% if errorMessage is defined %}
+							<p>{{ errorMessage }}</p>
+						{% endif %}
+					</div>
+					<p class="para">
+						<a href="{{ url('reset-password') }}">Forgot your password?</a>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

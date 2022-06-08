@@ -1,0 +1,55 @@
+{% set heading   = module.heading %}
+{% set moduleId  = module.moduleId %}
+{% set images    = module.images.all() %}
+{% set statistic = module.statistic.all() %}
+
+<section id="{{ moduleId ?: 'module-' ~ moduleIndex }}" class="statistics">
+    <div class="container">
+        {% for images in images %}
+            {% set phoneImage     = images.phoneImage.one() %}
+            {% set characterImage = images.characterImage.one() %}
+            {% set statistics     = images.statistics.all() %}
+            <div class="phone-image">
+                <img src="{{ siteUrl }}assets/images/Vector.png" alt="" class="shape">
+                <div class="phone">
+                    <div class="p">
+                        <img class="arrow" src="{{ siteUrl }}assets/images/Fill-1.png" alt="">
+                        <img class="arrow" src="{{ siteUrl }}assets/images/Fill-1.png" alt="">
+                        <img class="image-phone" src="{{ phoneImage.url }}" alt="">
+                        <div class="character"><img src="{{ characterImage.url }}" alt=""></div>
+                        {% for statistic in statistics %}
+                            {% set icon        = statistic.icon.one() %}
+                            {% set number      = statistic.number %}
+                            {% set description = statistic.description %}
+                            {% set bgColor     = statistic.backgroundColor %}
+                            <div class="phone-statistic" style="background-color: {{ bgColor }}">
+                                <div class="icon"><img src="{{ icon.url }}" alt=""></div>
+                                <div class="text">
+                                    <div class="number"><p>{{ number }}</p></div>
+                                    <div class="description"><p>{{ description }}</p></div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="main-text">
+            <div class="title"><p>{{ heading }}</p></div>
+            <div class="statistic">
+                {% for statistic in statistic %}
+                    {% set icon        = statistic.icon.one() %}
+                    {% set number      = statistic.number %}
+                    {% set description = statistic.description %}
+                    <div class="list">
+                        <div class="icon"><img src="{{ icon.url }}" alt=""></div>
+                        <div class="text">
+                            <div class="number"><p>{{ number }}</p></div>
+                            <div class="description"><p>{{ description }}</p></div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

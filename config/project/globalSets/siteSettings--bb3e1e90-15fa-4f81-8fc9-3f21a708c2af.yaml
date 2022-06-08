@@ -1,0 +1,37 @@
+fieldLayouts:
+  6d442656-8862-4bfa-b041-474dfcd2dc52:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8b644d79-e5fd-49d0-be32-f18a505cd11c # Site Google Map Api Key
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5b6d7881-9bc1-4b9e-8339-64da105704fb # Site Google Analytics GTM Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: b8fc7270-3447-477e-a9ea-f21be3c0cee3 # Site Google UA Tracking Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: 'Site Settings'
+        sortOrder: 1
+handle: siteSettings
+name: 'Site Settings'
+sortOrder: 2

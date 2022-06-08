@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+IP = "192.168.99.1**"
+DOMAIN = "projectname-local.dev.daytwo.no"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+	config.vm.box = "bento/ubuntu-20.04"
+
+	config.vm.provision "shell", path: "bootstrap.sh", args: [IP, DOMAIN]
+
+	config.vm.network "private_network", ip: IP
+
+	config.vm.synced_folder "./", "/vagrant", id: "vagrant-root",
+		owner: "vagrant", group: "vagrant", mount_options: ["dmode=777,fmode=777"]
+end

@@ -1,0 +1,14 @@
+columnSuffix: qrojmdua
+contentColumnType: boolean
+fieldGroup: dd03a0d7-4a40-4162-bef3-f490879fe99e # Globals - Site Navigation
+handle: useCustomNavigation
+instructions: 'Force usage of custom navigation. Disable this if you want to use Public Pages as default navigation structure.'
+name: 'Use Custom Navigation?'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

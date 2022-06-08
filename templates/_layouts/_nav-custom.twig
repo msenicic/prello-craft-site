@@ -1,0 +1,33 @@
+{% set navItems  = siteNav.siteMenuNav.all() %}
+{% set navButton = siteNav.navButton.all() %}
+
+{% if navItems | length %}
+    <nav class="site-nav">
+        <div class="inner">
+            <ul class="js-main-menu menu">
+                {% for menuItem in navItems %}
+                    {% if menuItem.type == 'entryField' %}
+                        {% set current_entry = menuItem.entryLink.one() %}
+
+                        <li{% if current_entry.url is same as(entry.url) %} class="active"{% endif %}>
+                            <a href="{{ current_entry.url }}">{{ current_entry.title }}</a>
+                        </li>
+                    {% endif %}
+                    {% if menuItem.type == 'typeLink' %}
+                        {% set openInNewTab = menuItem.openInNewTab %}
+                        <li>
+                            <a href="{{ menuItem.menuItemUrl ?: '' }}" target="{{ openInNewTab ? '_blank' }}">{{ menuItem.menuItemText ?: '' }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                <div class="button">
+                    {% for navButton in navButton %}
+                        {% set btnDestination = navButton.destination.one() %}
+                        {% set btnText        = navButton.buttonText %}
+                        <a href="{{ btnDestination.url }}"><span>{{ btnText }}</span><i class="fas fa-long-arrow-alt-right"></i></a>
+                    {% endfor %}
+                </div>
+            </ul>
+        </div>
+    </nav>
+{% endif %}

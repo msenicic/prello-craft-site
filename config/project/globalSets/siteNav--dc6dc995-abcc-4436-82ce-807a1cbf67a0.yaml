@@ -1,0 +1,50 @@
+fieldLayouts:
+  7f8b6747-c92c-49f6-9491-03503e85dea7:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 79deb152-a2fa-41a3-8fa2-e08ac08c357e # Site Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 3426bbd8-ae24-4099-88d4-f6fe3f6b1e18 # Use Custom Navigation?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2202461d-285c-4b02-9aa1-66fea5228786 # Site Custom Navigation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 85b0f58d-b253-4081-90fa-01c6d3d49ff7 # Nav Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Site Navigation'
+        sortOrder: 1
+handle: siteNav
+name: 'Site Navigation'
+sortOrder: 1

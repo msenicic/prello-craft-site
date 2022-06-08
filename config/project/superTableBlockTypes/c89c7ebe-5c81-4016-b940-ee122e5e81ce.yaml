@@ -1,0 +1,123 @@
+field: 962a5026-118c-4d2c-91f8-a25bf0881172 # Images
+fieldLayouts:
+  0bf1d0a1-3164-46a5-b181-db0fbb8322a6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 16e3947f-f17f-4564-88b1-5bbfd87258f5 # Phone Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2d46993a-c728-4402-a5b2-515f7b24dcf3 # Character Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5df73bb3-fa30-415f-aed6-330f010f0842 # Statistics
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2d46993a-c728-4402-a5b2-515f7b24dcf3: # Character Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: characterImage
+    instructions: ''
+    name: 'Character Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8dec0694-79e6-43cf-9898-1f9633496ab5' # Videos
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  5df73bb3-fa30-415f-aed6-330f010f0842: # Statistics
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: statistics
+    instructions: ''
+    name: Statistics
+    searchable: false
+    settings:
+      contentTable: '{{%matrixcontent_statistics}}'
+      maxBlocks: '3'
+      minBlocks: ''
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  16e3947f-f17f-4564-88b1-5bbfd87258f5: # Phone Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: phoneImage
+    instructions: ''
+    name: 'Phone Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8dec0694-79e6-43cf-9898-1f9633496ab5' # Videos
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

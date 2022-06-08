@@ -1,0 +1,20 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 574b4144-8924-4889-ac4d-eab24ab39def # Common - Page Header
+handle: store
+instructions: ''
+name: Store
+searchable: false
+settings:
+  contentTable: '{{%stc_store_1}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

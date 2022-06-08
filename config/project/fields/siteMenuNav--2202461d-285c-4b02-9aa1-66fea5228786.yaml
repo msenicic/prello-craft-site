@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: dd03a0d7-4a40-4162-bef3-f490879fe99e # Globals - Site Navigation
+handle: siteMenuNav
+instructions: 'Custom site navigation. Check above button and setup your own menu here.'
+name: 'Site Custom Navigation'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_sitemenunav}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

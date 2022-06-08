@@ -1,0 +1,51 @@
+{% set assetsCache = 1.17 %}
+{% set url = craft.app.request.url %}
+{% set seoTitle = entry.pageTitle is defined ? entry.pageTitle : false %}
+{% set seoTitle = seoTitle ?: entry.title %}
+{% set isHome = false %}
+
+{% if url == '/' %}
+    {% set seoTitle = false %}
+    {% set isHome = true %}
+{% endif %}
+
+<!DOCTYPE html>
+{% include '_components/_seo/daytwo_tag' %}
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+    {% block head %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta name="author" content="https://daytwo.no">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover shrink-to-fit=no">
+        <link rel="stylesheet" href="{{ siteUrl }}/assets/build/css/main.css">
+        {# {% css '/assets/build/css/main.css' %} #}
+
+        <link rel="icon" href="{{ siteUrl }}assets/images/icons/favicon.png?v=1.01">
+        <script src="https://kit.fontawesome.com/8a391c339d.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap" rel="stylesheet">
+        <meta name="theme-color" content="#8ffddf">
+        <title>{{ seoTitle ? seoTitle ~ ' - ' }}{{ siteName }}</title>
+
+        {% include '_components/_seo/og_tags' %}
+        {% include '_components/_seo/tracking_code_head' %}
+    {% endblock %}
+</head>
+<body {% if bodyClass is defined %}class="{{ bodyClass }}"{% endif %}>
+{% include '_components/_seo/tracking_code_body' %}
+{% include '_components/_dev/edit-entry' %}
+<div id="page">
+    {% include "_layouts/_header" %}
+    <div id="content" class="site-content">
+        <main id="main" role="main">
+            {% block main %}{% endblock %}
+        </main>
+    </div>
+    {% include "_layouts/_footer" %}
+</div>
+<script src="{{ siteUrl }}/assets/build/js/main.js"></script>
+{# {% js '/assets/build/js/main.js' %} #}
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% if currentUser and currentUser.admin %}
+	<div class="dev">
+		<a href="{{ entry.cpEditUrl }}" target="_blank" class="dev-edit-entry">
+			Edit Page
+		</a>
+		<a href="{{ logoutUrl }}" class="dev-edit-entry">
+			Log Out
+		</a>
+	</div>
+{% else %}
+	{% if currentUser %}
+		<div class="dev">
+			<a href="{{ siteUrl }}profile" class="dev-edit-entry">
+				Profile
+			</a>
+			<a href="{{ logoutUrl }}" class="dev-edit-entry">
+				Log Out
+			</a>
+		</div>
+	{% endif %}
+{% endif %}

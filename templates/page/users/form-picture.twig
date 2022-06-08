@@ -1,0 +1,20 @@
+{% set formImage   = entry.formImage.one() %}
+{% set formText    = entry.formText %}
+{% set char1       = entry.formChar1.one() %}
+{% set char2       = entry.formChar2.one() %}
+{% set formBgShape = entry.formBackgroundShape.one() %}
+
+<div class="form-picture">
+	<img class="bg-shape" src="{{ formBgShape.url }}" alt="">
+	<div class="phone">
+		<div class="top-text">
+			<p>{{ formText }}</p>
+		</div>
+		<div class="phone-image">
+			<img class="p" src="{{ formImage.url }}" alt="">
+			<img class="char-1" src="{{ char1.url }}" alt="">
+			<img class="char-2" src="{{ char2.url }}" alt="">
+			<img class="arrow" src="{{ siteUrl }}assets/images/Fill-2.png" alt="">
+		</div>
+	</div>
+</div>

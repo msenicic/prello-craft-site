@@ -1,0 +1,19 @@
+columnSuffix: bygsunvy
+contentColumnType: text
+fieldGroup: 1d2fca35-7d0e-4f92-a63e-d4eb52da96fb # Common - Page Data
+handle: externalUrl
+instructions: 'Enter external URL to link this page to.'
+name: 'External URL'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

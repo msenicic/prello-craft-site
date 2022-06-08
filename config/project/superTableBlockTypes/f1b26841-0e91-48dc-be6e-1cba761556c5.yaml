@@ -1,0 +1,53 @@
+field: d024166d-eb74-487d-bea1-85dde5252324 # Slider
+fieldLayouts:
+  17c4d0f1-abd2-4f4a-92df-959edcf64ab8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 68a6525a-1a83-400d-8430-3627525e49b9 # Phone Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  68a6525a-1a83-400d-8430-3627525e49b9: # Phone Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: phoneImage
+    instructions: ''
+    name: 'Phone Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8dec0694-79e6-43cf-9898-1f9633496ab5' # Videos
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

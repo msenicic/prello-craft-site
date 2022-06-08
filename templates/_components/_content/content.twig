@@ -1,0 +1,12 @@
+{% set pageContent = entry.pageContent.all() %}
+
+{% if pageContent | length %}
+    <div class="page-content">
+        {% for module in pageContent %}
+            {% include '_components/_content/_modules/' ~ module.type with {
+                module: module,
+                moduleIndex: loop.index,
+        } %}
+        {% endfor %}
+    </div>
+{% endif %}
